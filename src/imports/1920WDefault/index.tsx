@@ -125,7 +125,7 @@ function Background2() {
   return (
     <div className="bg-[#541896] relative self-stretch shrink-0" data-name="Background">
       <div className="content-stretch flex flex-col items-start p-[5px] relative size-full">
-        <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13.3px] text-white whitespace-nowrap">
+        <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[15px] text-white whitespace-nowrap">
           <p className="leading-[20px]">Khám phá SmartOne Web phiên bản mới</p>
         </div>
       </div>
@@ -863,7 +863,13 @@ function Img4() {
 
 function Background7() {
   return (
-    <div className="bg-[#00a700] content-stretch flex gap-[8px] h-[35px] items-center px-[5px] relative rounded-tl-[5px] rounded-tr-[5px] shrink-0" data-name="Background">
+    <div 
+      className="bg-[#00a700] content-stretch flex gap-[8px] h-[35px] items-center px-[5px] relative rounded-tl-[5px] rounded-tr-[5px] shrink-0 cursor-pointer hover:bg-[#009000] active:bg-[#007b00] transition-colors" 
+      data-name="Background"
+      onClick={() => {
+        window.dispatchEvent(new CustomEvent("vps_change_tab", { detail: "Đặt lệnh" }));
+      }}
+    >
       <Img4 />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12.4px] text-white whitespace-nowrap">
         <p className="leading-[35px]">Đặt lệnh</p>
