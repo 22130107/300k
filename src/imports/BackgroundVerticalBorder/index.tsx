@@ -388,7 +388,8 @@ function PortfolioRow({
           onFocus={() => setFocusedField("symbol")}
           onBlur={handleSymbolBlur}
           onChange={handleSymbolChange}
-          className="bg-transparent text-center text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px] min-w-[48px]"
+          className="bg-transparent text-center text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px]"
+          style={{ width: `${Math.max(symbolText.length + 1, 5)}ch` }}
           placeholder="Mã"
         />
       </div>
@@ -402,7 +403,8 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantity")}
           onBlur={() => handleBlurField("quantity", quantityText, 0, setQuantityText)}
           onChange={handleQuantityChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[28px]"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          style={{ width: `${Math.max(quantityText.length + 1, 4)}ch` }}
         />
       </div>
 
@@ -415,7 +417,8 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantityFS")}
           onBlur={() => handleBlurField("quantityFS", quantityFSText, 0, setQuantityFSText)}
           onChange={handleQuantityFSChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[44px]"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          style={{ width: `${Math.max(quantityFSText.length + 1, 6)}ch` }}
         />
       </div>
 
@@ -428,7 +431,8 @@ function PortfolioRow({
           onFocus={() => setFocusedField("avgPrice")}
           onBlur={() => handleBlurField("avgPrice", avgPriceText, 0, setAvgPriceText)}
           onChange={handleAvgPriceChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[56px]"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          style={{ width: `${Math.max(avgPriceText.length + 1, 7)}ch` }}
         />
       </div>
 
@@ -441,7 +445,8 @@ function PortfolioRow({
           onFocus={() => setFocusedField("profit")}
           onBlur={() => handleBlurField("profit", profitText, 0, setProfitText)}
           onChange={handleProfitChange}
-          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[52px]`}
+          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
+          style={{ width: `${Math.max(profitText.length + 1, 8)}ch` }}
         />
       </div>
 
@@ -455,7 +460,8 @@ function PortfolioRow({
             onFocus={() => setFocusedField("profitPercent")}
             onBlur={() => handleBlurField("profitPercent", profitPercentText, 0, setProfitPercentText)}
             onChange={handleProfitPercentChange}
-            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] min-w-[56px]`}
+            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px]`}
+            style={{ width: `${Math.max(profitPercentText.length + 1, 8)}ch` }}
           />
           <span className={`${textColorClass} text-[13.5px] font-[450] ml-0.5 pointer-events-none`}>%</span>
         </div>
