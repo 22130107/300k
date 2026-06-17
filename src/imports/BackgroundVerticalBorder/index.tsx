@@ -406,7 +406,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantity")}
           onBlur={() => handleBlurField("quantity", quantityText, 0, setQuantityText)}
           onChange={handleQuantityChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-2"
           style={{ width: `${Math.max(quantityText.length + 1, 4)}ch` }}
         />
       </div>
@@ -420,7 +420,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantityFS")}
           onBlur={() => handleBlurField("quantityFS", quantityFSText, 0, setQuantityFSText)}
           onChange={handleQuantityFSChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-2"
           style={{ width: `${Math.max(quantityFSText.length + 1, 6)}ch` }}
         />
       </div>
@@ -434,7 +434,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("avgPrice")}
           onBlur={() => handleBlurField("avgPrice", avgPriceText, 0, setAvgPriceText)}
           onChange={handleAvgPriceChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-2"
           style={{ width: `${Math.max(avgPriceText.length + 1, 7)}ch` }}
         />
       </div>
@@ -448,7 +448,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("profit")}
           onBlur={() => handleBlurField("profit", profitText, 0, setProfitText)}
           onChange={handleProfitChange}
-          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
+          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-2`}
           style={{ width: `${Math.max(profitText.length + 1, 8)}ch` }}
         />
       </div>
@@ -456,7 +456,7 @@ function PortfolioRow({
       {/* % Lãi / Lỗ Input */}
       <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className="flex items-center justify-end w-full pr-1">
+        <div className="flex items-center justify-end w-full pr-2">
           <input 
             type="text" 
             value={profitPercentText} 
@@ -472,7 +472,7 @@ function PortfolioRow({
 
       {/* Sell Button */}
       <div 
-        className="content-stretch flex flex-col items-center px-[2px] py-[1.5px] relative" 
+        className="content-stretch flex flex-col items-start pl-2 pr-[2px] py-[1.5px] relative" 
         data-name="Data"
         onClick={(e) => {
           e.stopPropagation();
@@ -512,14 +512,14 @@ function PortfolioTotalRow({ items }: { items: PortfolioItem[] }) {
 
       <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-1`}>
+        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-2`}>
           <p className="leading-[19.5px]">{formatNumber(totalProfit)}</p>
         </div>
       </div>
 
       <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-1`}>
+        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-2`}>
           <p className="leading-[19.5px]">{formatNumber(totalProfitPercent, 2)}%</p>
         </div>
       </div>
