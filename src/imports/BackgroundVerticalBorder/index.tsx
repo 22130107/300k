@@ -63,6 +63,13 @@ const formatNumber = (num: number, decimals: number = 0) => {
   });
 };
 
+// Format a cleaned numeric string with comma thousands separators, preserving trailing decimal zeros
+const formatWithCommas = (cleanText: string): string => {
+  const parts = cleanText.split('.');
+  const intFormatted = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return parts.length > 1 ? `${intFormatted}.${parts[1]}` : intFormatted;
+};
+
 const DEFAULT_PORTFOLIO: PortfolioItem[] = [
   { id: "FTS", symbol: "FTS", quantity: 1, quantityFS: 0, avgPrice: 24.946, profit: 1104, profitPercent: 4.43, currentPrice: 26.05 },
   { id: "GAS", symbol: "GAS", quantity: 1, quantityFS: 0, avgPrice: 80.120, profit: 2180, profitPercent: 2.72, currentPrice: 82.30 }
@@ -183,15 +190,15 @@ function Cell({ label, width }: { label: string; width: string }) {
 
 function PortfolioHeaderRow() {
   return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0 w-full" data-name="Header → Row">
-      <Cell label="Mã CK" width="60.59px" />
-      <Cell label="KL" width="25.86px" />
-      <Cell label="KL FS" width="54.63px" />
-      <Cell label="Giá TB" width="68.66px" />
-      <Cell label="Lãi / Lỗ" width="64.84px" />
-      <Cell label="% Lãi / Lỗ" width="86.92px" />
-      <div className="bg-[#434343] h-[30px] relative shrink-0 w-[56.5px]" data-name="Cell" />
-    </div>
+    <>
+      <Cell label="Mã CK" />
+      <Cell label="KL" />
+      <Cell label="KL FS" />
+      <Cell label="Giá TB" />
+      <Cell label="Lãi / Lỗ" />
+      <Cell label="% Lãi / Lỗ" />
+      <div className="bg-[#434343] h-[30px] relative" data-name="Cell" />
+    </>
   );
 }
 
@@ -284,6 +291,7 @@ function PortfolioRow({
       const cleanVal = val.replace(/,/g, '');
       const parsed = parseInt(cleanVal, 10);
       if (!isNaN(parsed)) {
+        lastSentQuantity.current = parsed;
         onUpdateField(item.id, "quantity", parsed);
       }
     }
@@ -296,18 +304,21 @@ function PortfolioRow({
       const cleanVal = val.replace(/,/g, '');
       const parsed = parseInt(cleanVal, 10);
       if (!isNaN(parsed)) {
+        lastSentQuantityFS.current = parsed;
         onUpdateField(item.id, "quantityFS", parsed);
       }
     }
   };
 
+  // avgPrice: commas = thousands separator, dot = decimal
   const handleAvgPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let val = e.target.value;
-    val = val.replace(/,/g, '.');
-    if (/^\d*\.?\d*$/.test(val)) {
+    const val = e.target.value;
+    if (/^[\d,]*\.?\d*$/.test(val)) {
       setAvgPriceText(val);
-      const parsed = parseFloat(val);
+      const cleanVal = val.replace(/,/g, '');
+      const parsed = parseFloat(cleanVal);
       if (!isNaN(parsed)) {
+        lastSentAvgPrice.current = parsed;
         onUpdateField(item.id, "avgPrice", parsed);
       }
     }
@@ -320,18 +331,21 @@ function PortfolioRow({
       const cleanVal = val.replace(/,/g, '');
       const parsed = parseFloat(cleanVal);
       if (!isNaN(parsed)) {
+        lastSentProfit.current = parsed;
         onUpdateField(item.id, "profit", parsed);
       }
     }
   };
 
+  // profitPercent: commas = thousands separator, dot = decimal
   const handleProfitPercentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let val = e.target.value;
-    val = val.replace(/,/g, '.');
-    if (/^[+-]?\d*\.?\d*$/.test(val)) {
+    const val = e.target.value;
+    if (/^[+-]?[\d,]*\.?\d*$/.test(val)) {
       setProfitPercentText(val);
-      const parsed = parseFloat(val);
+      const cleanVal = val.replace(/,/g, '');
+      const parsed = parseFloat(cleanVal);
       if (!isNaN(parsed)) {
+        lastSentProfitPercent.current = parsed;
         onUpdateField(item.id, "profitPercent", parsed);
       }
     }
@@ -339,30 +353,35 @@ function PortfolioRow({
 
   const handleBlurField = (field: keyof PortfolioItem, text: string, defaultValue: number, setter: (v: string) => void) => {
     setFocusedField(null);
-    let cleanText = text;
-    if (field === "avgPrice" || field === "profitPercent") {
-      cleanText = text.replace(/,/g, '.');
-    } else {
-      cleanText = text.replace(/,/g, '');
-    }
+    // Always strip commas (thousands separator) for all fields
+    const cleanText = text.replace(/,/g, '');
     const parsed = parseFloat(cleanText);
     if (isNaN(parsed)) {
+      // Update ref synchronously so useEffect won't override
+      if (field === "quantity") lastSentQuantity.current = defaultValue;
+      else if (field === "quantityFS") lastSentQuantityFS.current = defaultValue;
+      else if (field === "avgPrice") lastSentAvgPrice.current = defaultValue;
+      else if (field === "profit") lastSentProfit.current = defaultValue;
+      else if (field === "profitPercent") lastSentProfitPercent.current = defaultValue;
       onUpdateField(item.id, field, defaultValue);
-      setter(String(defaultValue));
+      setter(formatNumber(defaultValue));
     } else {
+      // Update ref synchronously before onUpdateField so useEffect won't override
+      if (field === "quantity") lastSentQuantity.current = parsed;
+      else if (field === "quantityFS") lastSentQuantityFS.current = parsed;
+      else if (field === "avgPrice") lastSentAvgPrice.current = parsed;
+      else if (field === "profit") lastSentProfit.current = parsed;
+      else if (field === "profitPercent") lastSentProfitPercent.current = parsed;
       onUpdateField(item.id, field, parsed);
-      // Keep the user's typed text (with trailing zeros) intact
-      setter(cleanText);
+      // Format with comma separators but preserve trailing decimal zeros
+      setter(formatWithCommas(cleanText));
     }
   };
 
   return (
-    <div 
-      className="content-stretch flex items-start justify-center relative shrink-0 w-full hover:bg-[#3d3d3d] transition-colors" 
-      data-name="Row"
-    >
+    <>
       {/* Mã CK Input */}
-      <div className="content-stretch flex flex-col items-center p-[2px] relative shrink-0 w-[60.59px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-center p-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-l border-b border-r inset-0 pointer-events-none" />
         <input 
           type="text" 
@@ -370,13 +389,13 @@ function PortfolioRow({
           onFocus={() => setFocusedField("symbol")}
           onBlur={handleSymbolBlur}
           onChange={handleSymbolChange}
-          className="bg-transparent text-center text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px]"
+          className="bg-transparent text-center text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px] min-w-[48px]"
           placeholder="Mã"
         />
       </div>
 
       {/* KL Input */}
-      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative shrink-0 w-[25.86px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <input 
           type="text" 
@@ -384,12 +403,12 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantity")}
           onBlur={() => handleBlurField("quantity", quantityText, 0, setQuantityText)}
           onChange={handleQuantityChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[28px]"
         />
       </div>
 
       {/* KL FS Input */}
-      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative shrink-0 w-[54.63px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <input 
           type="text" 
@@ -397,12 +416,12 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantityFS")}
           onBlur={() => handleBlurField("quantityFS", quantityFSText, 0, setQuantityFSText)}
           onChange={handleQuantityFSChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[44px]"
         />
       </div>
 
       {/* Giá TB Input */}
-      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative shrink-0 w-[68.66px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <input 
           type="text" 
@@ -410,12 +429,12 @@ function PortfolioRow({
           onFocus={() => setFocusedField("avgPrice")}
           onBlur={() => handleBlurField("avgPrice", avgPriceText, 0, setAvgPriceText)}
           onChange={handleAvgPriceChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[56px]"
         />
       </div>
 
       {/* Lãi / Lỗ Input */}
-      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative shrink-0 w-[64.84px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <input 
           type="text" 
@@ -423,12 +442,12 @@ function PortfolioRow({
           onFocus={() => setFocusedField("profit")}
           onBlur={() => handleBlurField("profit", profitText, 0, setProfitText)}
           onChange={handleProfitChange}
-          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
+          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1 min-w-[52px]`}
         />
       </div>
 
       {/* % Lãi / Lỗ Input */}
-      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative shrink-0 w-[86.92px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <div className="flex items-center justify-end w-full pr-1">
           <input 
@@ -437,7 +456,7 @@ function PortfolioRow({
             onFocus={() => setFocusedField("profitPercent")}
             onBlur={() => handleBlurField("profitPercent", profitPercentText, 0, setProfitPercentText)}
             onChange={handleProfitPercentChange}
-            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px]`}
+            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] min-w-[56px]`}
           />
           <span className={`${textColorClass} text-[13.5px] font-[450] ml-0.5 pointer-events-none`}>%</span>
         </div>
@@ -445,7 +464,7 @@ function PortfolioRow({
 
       {/* Sell Button */}
       <div 
-        className="content-stretch flex flex-col items-center px-[2px] py-[1.5px] relative shrink-0 w-[56.5px]" 
+        className="content-stretch flex flex-col items-center px-[2px] py-[1.5px] relative" 
         data-name="Data"
         onClick={(e) => {
           e.stopPropagation();
@@ -461,7 +480,7 @@ function PortfolioRow({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -474,36 +493,33 @@ function PortfolioTotalRow({ items }: { items: PortfolioItem[] }) {
   const textColorClass = isProfit ? "text-[#0f0]" : "text-[#ff3b30]";
 
   return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0 w-full" data-name="Row">
-      <div className="content-stretch flex flex-col items-center pb-[1.5px] pt-px px-[2px] relative shrink-0 w-[209.73px]" data-name="Data">
+    <>
+      {/* Tổng spans first 4 columns */}
+      <div className="content-stretch flex flex-col items-center pb-[1.5px] pt-px px-[2px] relative col-span-4" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-l border-b border-r inset-0 pointer-events-none" />
         <div className="[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[13.5px] text-center text-white whitespace-nowrap">
           <p className="leading-[19.5px]">Tổng</p>
         </div>
       </div>
 
-      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative shrink-0 w-[64.84px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap`}>
-          <p className="leading-[19.5px]">
-            {formatNumber(totalProfit)}
-          </p>
+          <p className="leading-[19.5px]">{formatNumber(totalProfit)}</p>
         </div>
       </div>
 
-      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative shrink-0 w-[86.92px]" data-name="Data">
+      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
         <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap`}>
-          <p className="leading-[19.5px]">
-            {formatNumber(totalProfitPercent, 2)}%
-          </p>
+          <p className="leading-[19.5px]">{formatNumber(totalProfitPercent, 2)}%</p>
         </div>
       </div>
 
-      <div className="h-[22.5px] relative shrink-0 w-[56.5px]" data-name="Data">
+      <div className="h-[22.5px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
       </div>
-    </div>
+    </>
   );
 }
 
@@ -817,8 +833,11 @@ export default function BackgroundVerticalBorder() {
           {activeTab === "Danh mục" && (
             <div className="bg-[#343434] content-stretch flex flex-col gap-[4.5px] items-start relative shrink-0 w-full" data-name="Background">
               <div className="content-stretch flex flex-col items-start relative shrink-0 w-full mt-[10px]" data-name="Table">
-                <PortfolioHeaderRow />
-                <div className="w-full flex flex-col">
+                <div
+                  className="w-full overflow-x-auto"
+                  style={{ display: 'grid', gridTemplateColumns: 'repeat(7, auto)', width: '100%' }}
+                >
+                  <PortfolioHeaderRow />
                   {portfolio.length > 0 ? (
                     portfolio.map(item => (
                       <PortfolioRow 
@@ -829,12 +848,12 @@ export default function BackgroundVerticalBorder() {
                       />
                     ))
                   ) : (
-                    <div className="text-center py-8 text-gray-500 text-[13px] border-b border-[#434343] w-full">
+                    <div className="col-span-7 text-center py-8 text-gray-500 text-[13px] border-b border-[#434343]">
                       Danh mục của bạn đang trống. Click nút 'Đặt lệnh' hoặc click một mã CK trên bảng giá để thêm!
                     </div>
                   )}
+                  <PortfolioTotalRow items={portfolio} />
                 </div>
-                <PortfolioTotalRow items={portfolio} />
               </div>
               <PaginationRow />
             </div>
