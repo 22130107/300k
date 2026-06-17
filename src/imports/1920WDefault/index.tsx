@@ -390,7 +390,7 @@ function Container16() {
 function Container18() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
-      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#dadada] text-[12.4px] text-center whitespace-nowrap">
+      <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#dadada] text-[13px] text-center whitespace-nowrap">
         <p className="leading-[35px]">Danh mục theo dõi</p>
       </div>
     </div>
@@ -398,7 +398,9 @@ function Container18() {
 }
 
 function Item() {
-  return (
+  return (Danh mục theo dõi
+
+
     <div className="bg-[rgba(60,60,60,0.95)] content-stretch flex flex-col h-[35px] items-start px-[12px] relative rounded-tl-[5px] rounded-tr-[5px] shrink-0" data-name="Item">
       <Container18 />
     </div>
@@ -952,7 +954,7 @@ function OverlayShadow() {
 
 function OverlayShadow1() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12.9px] text-center text-white whitespace-nowrap">
@@ -966,7 +968,7 @@ function OverlayShadow1() {
 
 function OverlayShadow2() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -980,7 +982,7 @@ function OverlayShadow2() {
 
 function OverlayShadow3() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -1139,7 +1141,7 @@ function Container27() {
 
 function Container26() {
   return (
-    <div className="min-w-[287.1000061035156px] relative shrink-0 w-[380.16px]" data-name="Container">
+    <div className="min-w-[287.1000061035156px] relative shrink-0 w-[19.8%]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <OverlayShadow4 />
         <Container27 />
@@ -1282,7 +1284,7 @@ function Container35() {
 
 function Container34() {
   return (
-    <div className="min-w-[143.5500030517578px] relative shrink-0 w-[190.08px]" data-name="Container">
+    <div className="min-w-[143.5500030517578px] relative shrink-0 w-[9.9%]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <OverlayShadow11 />
         <Container35 />
@@ -1438,7 +1440,7 @@ function Container41() {
 
 function Container40() {
   return (
-    <div className="min-w-[287.1000061035156px] relative shrink-0 w-[380.16px]" data-name="Container">
+    <div className="min-w-[287.1000061035156px] relative shrink-0 w-[19.8%]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <OverlayShadow15 />
         <Container41 />
@@ -1449,7 +1451,7 @@ function Container40() {
 
 function OverlayShadow22() {
   return (
-    <div className="min-w-[72.5px] relative shrink-0 w-[96px]" data-name="Overlay+Shadow">
+    <div className="min-w-[72.5px] relative shrink-0 w-[5.0%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12.5px] text-center text-white whitespace-nowrap">
@@ -1463,7 +1465,7 @@ function OverlayShadow22() {
 
 function OverlayShadow23() {
   return (
-    <div className="min-w-[58px] relative shrink-0 w-[76.8px]" data-name="Overlay+Shadow">
+    <div className="min-w-[58px] relative shrink-0 w-[4.0%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -1477,7 +1479,7 @@ function OverlayShadow23() {
 
 function OverlayShadow24() {
   return (
-    <div className="min-w-[58px] relative shrink-0 w-[76.8px]" data-name="Overlay+Shadow">
+    <div className="min-w-[58px] relative shrink-0 w-[4.0%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -1491,7 +1493,7 @@ function OverlayShadow24() {
 
 function OverlayShadow25() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -1505,7 +1507,7 @@ function OverlayShadow25() {
 
 function OverlayShadow26() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[13px] text-center text-white whitespace-nowrap">
@@ -1519,7 +1521,7 @@ function OverlayShadow26() {
 
 function OverlayShadow27() {
   return (
-    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[63.36px]" data-name="Overlay+Shadow">
+    <div className="min-w-[47.849998474121094px] relative shrink-0 w-[3.3%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none" />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center min-w-[inherit] overflow-clip py-[18px] relative rounded-[inherit] size-full">
         <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12.7px] text-center text-white whitespace-nowrap">
@@ -1555,7 +1557,7 @@ function Container50() {
 
 function OverlayShadow29() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[47.849998474121094px] overflow-clip relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[47.849998474121094px] overflow-clip relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <Container50 />
       <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_-1px_-1px_0px_0px_#343434]" />
@@ -1595,7 +1597,7 @@ function Container52() {
 
 function OverlayShadow30() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[47.849998474121094px] overflow-clip relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[47.849998474121094px] overflow-clip relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <Container51 />
       <Container52 />
@@ -1616,7 +1618,7 @@ function Container53() {
 
 function OverlayShadow31() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[76.8499984741211px] overflow-clip relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-start min-w-[76.8499984741211px] overflow-clip relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <Container53 />
       <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_-1px_-1px_0px_0px_#343434]" />
@@ -1636,7 +1638,7 @@ function Container49() {
 
 function Container48() {
   return (
-    <div className="min-w-[176.89999389648438px] relative shrink-0 w-[234.23px]" data-name="Container">
+    <div className="min-w-[176.89999389648438px] relative shrink-0 w-[12.2%]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <OverlayShadow28 />
         <Container49 />
@@ -1647,11 +1649,12 @@ function Container48() {
 
 function OverlayHorizontalBorderShadow() {
   return (
-    <div className="min-w-[1450px] relative shrink-0 w-full" data-name="Overlay+HorizontalBorder+Shadow">
+    <div className="min-w-[1460px] relative shrink-0 w-full" data-name="Overlay+HorizontalBorder+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div aria-hidden className="absolute border-[#343434] border-solid border-t inset-0 pointer-events-none" />
       <div className="flex flex-row items-center min-w-[inherit] size-full">
-        <div className="content-stretch flex items-center min-w-[inherit] pl-[1%] pr-[0.05px] pt-px relative size-full">
+        <div className="content-stretch flex items-center min-w-[inherit] pl-0 pr-[0.05px] pt-px relative size-full">
+          <div className="w-[1%] shrink-0" />
           <OverlayShadow />
           <OverlayShadow1 />
           <OverlayShadow2 />
@@ -2081,7 +2084,7 @@ function BackgroundShadow8() {
 
 function OverlayShadow52() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.3px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">900,70</p>
@@ -2093,7 +2096,7 @@ function OverlayShadow52() {
 
 function OverlayShadow53() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[21.8px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[21.8px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,776,40</p>
@@ -2105,7 +2108,7 @@ function OverlayShadow53() {
 
 function OverlayShadow54() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">19,433,25</p>
@@ -2559,7 +2562,7 @@ function BackgroundShadow17() {
 
 function OverlayShadow75() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">56,20</p>
@@ -2571,7 +2574,7 @@ function OverlayShadow75() {
 
 function OverlayShadow76() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[21.8px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[21.8px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,027,40</p>
@@ -2583,7 +2586,7 @@ function OverlayShadow76() {
 
 function OverlayShadow77() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">34,457,47</p>
@@ -3037,7 +3040,7 @@ function BackgroundShadow26() {
 
 function OverlayShadow98() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">245,52</p>
@@ -3049,7 +3052,7 @@ function OverlayShadow98() {
 
 function OverlayShadow99() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">797,62</p>
@@ -3061,7 +3064,7 @@ function OverlayShadow99() {
 
 function OverlayShadow100() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">334,405,97</p>
@@ -3515,7 +3518,7 @@ function BackgroundShadow35() {
 
 function OverlayShadow121() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">234,60</p>
@@ -3527,7 +3530,7 @@ function OverlayShadow121() {
 
 function OverlayShadow122() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">629,20</p>
@@ -3539,7 +3542,7 @@ function OverlayShadow122() {
 
 function OverlayShadow123() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[19.81px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">65,578,74</p>
@@ -3993,7 +3996,7 @@ function BackgroundShadow44() {
 
 function OverlayShadow144() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">94,60</p>
@@ -4005,7 +4008,7 @@ function OverlayShadow144() {
 
 function OverlayShadow145() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">810,93</p>
@@ -4017,7 +4020,7 @@ function OverlayShadow145() {
 
 function OverlayShadow146() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">460,614,82</p>
@@ -4471,7 +4474,7 @@ function BackgroundShadow53() {
 
 function OverlayShadow167() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">10,50</p>
@@ -4483,7 +4486,7 @@ function OverlayShadow167() {
 
 function OverlayShadow168() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">582,60</p>
@@ -4495,7 +4498,7 @@ function OverlayShadow168() {
 
 function OverlayShadow169() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.3px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">395,754,35</p>
@@ -4949,7 +4952,7 @@ function BackgroundShadow59() {
 
 function OverlayShadow193() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">78,00</p>
@@ -4961,7 +4964,7 @@ function OverlayShadow193() {
 
 function OverlayShadow194() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">507,80</p>
@@ -4973,7 +4976,7 @@ function OverlayShadow194() {
 
 function OverlayShadow195() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">812,261,99</p>
@@ -5427,7 +5430,7 @@ function BackgroundShadow67() {
 
 function OverlayShadow217() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">189,00</p>
@@ -5439,7 +5442,7 @@ function OverlayShadow217() {
 
 function OverlayShadow218() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">562,40</p>
@@ -5451,7 +5454,7 @@ function OverlayShadow218() {
 
 function OverlayShadow219() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">857,266,91</p>
@@ -5905,7 +5908,7 @@ function BackgroundShadow76() {
 
 function OverlayShadow240() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">153,42</p>
@@ -5917,7 +5920,7 @@ function OverlayShadow240() {
 
 function OverlayShadow241() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">268,70</p>
@@ -5929,7 +5932,7 @@ function OverlayShadow241() {
 
 function OverlayShadow242() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,744,996,79</p>
@@ -6383,7 +6386,7 @@ function BackgroundShadow85() {
 
 function OverlayShadow263() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">74,14</p>
@@ -6395,7 +6398,7 @@ function OverlayShadow263() {
 
 function OverlayShadow264() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">206,94</p>
@@ -6407,7 +6410,7 @@ function OverlayShadow264() {
 
 function OverlayShadow265() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,703,761,37</p>
@@ -6861,7 +6864,7 @@ function BackgroundShadow94() {
 
 function OverlayShadow286() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.3px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">269,80</p>
@@ -6873,7 +6876,7 @@ function OverlayShadow286() {
 
 function OverlayShadow287() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">174,40</p>
@@ -6885,7 +6888,7 @@ function OverlayShadow287() {
 
 function OverlayShadow288() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">2,102,643,83</p>
@@ -7339,7 +7342,7 @@ function BackgroundShadow103() {
 
 function OverlayShadow309() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">26,33</p>
@@ -7351,7 +7354,7 @@ function OverlayShadow309() {
 
 function OverlayShadow310() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">147,82</p>
@@ -7363,7 +7366,7 @@ function OverlayShadow310() {
 
 function OverlayShadow311() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.3px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">3,473,079,96</p>
@@ -7817,7 +7820,7 @@ function BackgroundShadow112() {
 
 function OverlayShadow332() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.1px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">623,09</p>
@@ -7829,7 +7832,7 @@ function OverlayShadow332() {
 
 function OverlayShadow333() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">139,30</p>
@@ -7841,7 +7844,7 @@ function OverlayShadow333() {
 
 function OverlayShadow334() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">280,613,36</p>
@@ -8295,7 +8298,7 @@ function BackgroundShadow121() {
 
 function OverlayShadow355() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">82,80</p>
@@ -8307,7 +8310,7 @@ function OverlayShadow355() {
 
 function OverlayShadow356() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.82px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">123,21</p>
@@ -8319,7 +8322,7 @@ function OverlayShadow356() {
 
 function OverlayShadow357() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,143,649,55</p>
@@ -8773,7 +8776,7 @@ function BackgroundShadow130() {
 
 function OverlayShadow378() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[31.81px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">136,73</p>
@@ -8785,7 +8788,7 @@ function OverlayShadow378() {
 
 function OverlayShadow379() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">89,97</p>
@@ -8797,7 +8800,7 @@ function OverlayShadow379() {
 
 function OverlayShadow380() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,069,898,50</p>
@@ -9251,7 +9254,7 @@ function BackgroundShadow139() {
 
 function OverlayShadow401() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">22,60</p>
@@ -9263,7 +9266,7 @@ function OverlayShadow401() {
 
 function OverlayShadow402() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">91,60</p>
@@ -9275,7 +9278,7 @@ function OverlayShadow402() {
 
 function OverlayShadow403() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.3px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">2,378,948,86</p>
@@ -9722,7 +9725,7 @@ function BackgroundShadow148() {
 
 function OverlayShadow424() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">65,80</p>
@@ -9734,7 +9737,7 @@ function OverlayShadow424() {
 
 function OverlayShadow425() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[32.71px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[32.71px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">116,02</p>
@@ -9746,7 +9749,7 @@ function OverlayShadow425() {
 
 function OverlayShadow426() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">175,493,93</p>
@@ -10200,7 +10203,7 @@ function BackgroundShadow157() {
 
 function OverlayShadow447() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">49,50</p>
@@ -10212,7 +10215,7 @@ function OverlayShadow447() {
 
 function OverlayShadow448() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">96,00</p>
@@ -10224,7 +10227,7 @@ function OverlayShadow448() {
 
 function OverlayShadow449() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">275,351,53</p>
@@ -10678,7 +10681,7 @@ function BackgroundShadow166() {
 
 function OverlayShadow470() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">61,00</p>
@@ -10690,7 +10693,7 @@ function OverlayShadow470() {
 
 function OverlayShadow471() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">63,20</p>
@@ -10702,7 +10705,7 @@ function OverlayShadow471() {
 
 function OverlayShadow472() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">139,451,12</p>
@@ -11156,7 +11159,7 @@ function BackgroundShadow175() {
 
 function OverlayShadow493() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">25,89</p>
@@ -11168,7 +11171,7 @@ function OverlayShadow493() {
 
 function OverlayShadow494() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">35,97</p>
@@ -11180,7 +11183,7 @@ function OverlayShadow494() {
 
 function OverlayShadow495() {
   return (
-    <div className="h-[28px] min-w-[76.8499984741211px] pointer-events-none relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="h-[28px] min-w-[76.8499984741211px] pointer-events-none relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0" />
       <div className="absolute inset-0 rounded-[inherit] shadow-[inset_-1px_-1px_0px_0px_#343434]" />
     </div>
@@ -11631,7 +11634,7 @@ function BackgroundShadow184() {
 
 function OverlayShadow516() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.8px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">73,80</p>
@@ -11643,7 +11646,7 @@ function OverlayShadow516() {
 
 function OverlayShadow517() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">29,30</p>
@@ -11655,7 +11658,7 @@ function OverlayShadow517() {
 
 function OverlayShadow518() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,132,145,56</p>
@@ -12109,7 +12112,7 @@ function BackgroundShadow193() {
 
 function OverlayShadow539() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[39.37px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[39.37px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">11,90</p>
@@ -12121,7 +12124,7 @@ function OverlayShadow539() {
 
 function OverlayShadow540() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">27,40</p>
@@ -12133,7 +12136,7 @@ function OverlayShadow540() {
 
 function OverlayShadow541() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[8px] pr-[3.12px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">1,021,671,43</p>
@@ -12587,7 +12590,7 @@ function BackgroundShadow202() {
 
 function OverlayShadow562() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">18,00</p>
@@ -12599,7 +12602,7 @@ function OverlayShadow562() {
 
 function OverlayShadow563() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">25,20</p>
@@ -12611,7 +12614,7 @@ function OverlayShadow563() {
 
 function OverlayShadow564() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[14.03px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[14.03px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">117,642,82</p>
@@ -13065,7 +13068,7 @@ function BackgroundShadow211() {
 
 function OverlayShadow585() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.48px] pr-[8.01px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">58,10</p>
@@ -13077,7 +13080,7 @@ function OverlayShadow585() {
 
 function OverlayShadow586() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[76.52px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[47.849998474121094px] pl-[38.49px] pr-[8px] relative shrink-0 w-[27.73%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.6px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">29,23</p>
@@ -13089,7 +13092,7 @@ function OverlayShadow586() {
 
 function OverlayShadow587() {
   return (
-    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[81.2px]" data-name="Overlay+Shadow">
+    <div className="content-stretch flex flex-col h-[28px] items-end min-w-[76.8499984741211px] pl-[13.14px] pr-[8px] relative shrink-0 w-[44.54%]" data-name="Overlay+Shadow">
       <div aria-hidden className="absolute bg-[rgba(255,255,255,0)] inset-0 pointer-events-none" />
       <div className="[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[11.4px] text-right text-white whitespace-nowrap">
         <p className="leading-[28px]">846,779,74</p>
@@ -13168,7 +13171,7 @@ function Rowgroup() {
 
 function GridGrid() {
   return (
-    <div className="bg-black flex-[1_0_0] overflow-auto relative w-[1920px]" data-name="Grid - grid">
+    <div className="bg-black flex-[1_0_0] overflow-auto relative w-full" data-name="Grid - grid">
       <Rowgroup />
     </div>
   );
@@ -13184,7 +13187,7 @@ function Container55() {
 
 function Container54() {
   return (
-    <div className="content-stretch flex flex-col items-start min-w-[1450px] relative flex-[1_0_0] w-full" data-name="Container">
+    <div className="content-stretch flex flex-col items-start min-w-[1460px] relative flex-[1_0_0] w-full" data-name="Container">
       <Container55 />
     </div>
   );
