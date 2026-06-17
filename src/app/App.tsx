@@ -37,7 +37,7 @@ export default function App() {
         }}
       >
         <Container />
-        <div className="absolute right-0 top-[245px] w-[460px] bottom-[34px]">
+        <div className="absolute right-0 top-[245px] w-fit min-w-[420px] bottom-[34px]">
           <BackgroundVerticalBorder />
         </div>
       </div>
