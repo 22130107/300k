@@ -25,6 +25,7 @@ interface OrderLog {
 
 // Known reference prices of board stocks
 const STOCK_PRICES: Record<string, number> = {
+  "FTS": 27.3932026,
   "VIB": 16.20,
   "TCB": 31.75,
   "FPT": 73.20,
@@ -71,13 +72,15 @@ const formatWithCommas = (cleanText: string): string => {
 };
 
 const DEFAULT_PORTFOLIO: PortfolioItem[] = [
-  { id: "FTS", symbol: "FTS", quantity: 1, quantityFS: 0, avgPrice: 24.946, profit: 1104, profitPercent: 4.43, currentPrice: 26.05 },
-  { id: "GAS", symbol: "GAS", quantity: 1, quantityFS: 0, avgPrice: 80.120, profit: 2180, profitPercent: 2.72, currentPrice: 82.30 }
+  { id: "FTS", symbol: "FTS", quantity: 10000, quantityFS: 0, avgPrice: 24.946, profit: 24472026, profitPercent: 9.81, currentPrice: 27.3932026 },
+  { id: "GAS", symbol: "GAS", quantity: 1, quantityFS: 0, avgPrice: 80.120, profit: 1680, profitPercent: 2.10, currentPrice: 81.80 },
+  { id: "HPG", symbol: "HPG", quantity: 2, quantityFS: 0, avgPrice: 16.200, profit: 16000, profitPercent: 49.38, currentPrice: 24.20 }
 ];
 
 const DEFAULT_ORDERS: OrderLog[] = [
   { id: "1", time: "10:14:22", symbol: "GAS", type: "BUY", quantity: 1, price: 80.120, status: "Khớp toàn bộ" },
-  { id: "2", time: "10:05:11", symbol: "FTS", type: "BUY", quantity: 1, price: 24.946, status: "Khớp toàn bộ" }
+  { id: "2", time: "10:05:11", symbol: "FTS", type: "BUY", quantity: 10000, price: 24.946, status: "Khớp toàn bộ" },
+  { id: "3", time: "09:45:30", symbol: "HPG", type: "BUY", quantity: 2, price: 16.200, status: "Khớp toàn bộ" }
 ];
 
 // Tab Item
@@ -124,7 +127,7 @@ function BackgroundHorizontalBorder({ activeTab, setActiveTab }: { activeTab: st
 // Account Header
 function AccountHeader() {
   const [selectedAccount, setSelectedAccount] = useState(() => {
-    return localStorage.getItem("vps_selected_account") || "7423321";
+    return localStorage.getItem("vps_selected_account") || "7423326";
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -556,12 +559,25 @@ export default function BackgroundVerticalBorder() {
     const savedPortfolio = localStorage.getItem("vps_portfolio");
     if (savedPortfolio) {
       let parsed = JSON.parse(savedPortfolio);
+      
+      // If the saved portfolio is the old default (e.g. quantity of FTS is 1, or HPG is missing), reset to DEFAULT_PORTFOLIO
+      const hasOldFts = parsed.some((item: any) => item.symbol === "FTS" && item.quantity === 1);
+      const missingHpg = !parsed.some((item: any) => item.symbol === "HPG");
+      if (hasOldFts || missingHpg) {
+        localStorage.setItem("vps_portfolio", JSON.stringify(DEFAULT_PORTFOLIO));
+        localStorage.setItem("vps_orders", JSON.stringify(DEFAULT_ORDERS));
+        localStorage.setItem("vps_selected_account", "7423326");
+        setPortfolio(DEFAULT_PORTFOLIO);
+        setOrders(DEFAULT_ORDERS);
+        return;
+      }
+
       let migrated = false;
       parsed = parsed.map((item: any) => {
         // Migrate GAS if it's 82.40
         if (item.symbol === "GAS" && item.currentPrice === 82.40) {
           migrated = true;
-          return { ...item, currentPrice: 82.30, profit: 2180, profitPercent: 2.72 };
+          return { ...item, currentPrice: 81.80, profit: 1680, profitPercent: 2.10 };
         }
         // Ensure profit and profitPercent are present in legacy records
         if (item.profit === undefined || item.profitPercent === undefined) {
@@ -774,16 +790,23 @@ export default function BackgroundVerticalBorder() {
       if (item.id === id) {
         const updatedItem = { ...item, [field]: value };
         
-        // If they edit Mã CK, Quantity, or AvgPrice, recalculate profit and profitPercent
+        // If they edit Mã CK, Quantity, or AvgPrice
         if (field === "symbol" || field === "quantity" || field === "avgPrice") {
           const sym = field === "symbol" ? String(value).toUpperCase() : item.symbol;
           const qty = field === "quantity" ? Number(value) : item.quantity;
           const avgP = field === "avgPrice" ? Number(value) : item.avgPrice;
           
-          const currentPrice = getStockCurrentPrice(sym, avgP);
-          updatedItem.currentPrice = currentPrice;
-          updatedItem.profit = parseFloat(((currentPrice - avgP) * qty * 1000).toFixed(0));
-          updatedItem.profitPercent = avgP > 0 ? parseFloat((((currentPrice - avgP) / avgP) * 100).toFixed(2)) : 0;
+          const hasMarketPrice = STOCK_PRICES[sym] !== undefined;
+          if (hasMarketPrice) {
+            const currentPrice = STOCK_PRICES[sym];
+            updatedItem.currentPrice = currentPrice;
+            updatedItem.profit = parseFloat(((currentPrice - avgP) * qty * 1000).toFixed(0));
+            updatedItem.profitPercent = avgP > 0 ? parseFloat((((currentPrice - avgP) / avgP) * 100).toFixed(2)) : 0;
+          } else {
+            // Keep the existing profitPercent and calculate profit from it using the formula
+            const totalCost = avgP * qty * 1000;
+            updatedItem.profit = parseFloat((totalCost * (item.profitPercent / 100)).toFixed(0));
+          }
         }
         
         // If they edit profit manually, update profitPercent to match mathematically
