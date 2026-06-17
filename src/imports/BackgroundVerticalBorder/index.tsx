@@ -816,7 +816,7 @@ export default function BackgroundVerticalBorder() {
   const totalProfitVal = portfolio.reduce((sum, item) => sum + item.profit, 0);
 
   return (
-    <div className="bg-[#343434] content-stretch flex flex-col items-start pl-px relative size-full border-l border-[#3c3c3c]" data-name="Background+VerticalBorder">
+    <div className="bg-[#343434] content-stretch flex flex-col items-stretch pl-px relative w-fit min-w-full h-full border-l border-[#3c3c3c]" data-name="Background+VerticalBorder">
       <style>{`
         .borderless-input::-webkit-outer-spin-button,
         .borderless-input::-webkit-inner-spin-button {
@@ -830,17 +830,17 @@ export default function BackgroundVerticalBorder() {
       
       <BackgroundHorizontalBorder activeTab={activeTab} setActiveTab={setActiveTab} />
       
-      <div className="bg-[#343434] h-[579px] relative shrink-0 w-full overflow-hidden flex flex-col" data-name="Background">
+      <div className="bg-[#343434] h-[579px] relative shrink-0 w-fit min-w-full overflow-hidden flex flex-col" data-name="Background">
         <AccountHeader />
         
         {/* Main tabs content */}
-        <div className="flex-1 w-full overflow-y-auto px-1">
+        <div className="flex-1 w-fit min-w-full overflow-y-auto px-1 flex flex-col items-stretch">
           {activeTab === "Danh mục" && (
-            <div className="bg-[#343434] content-stretch flex flex-col gap-[4.5px] items-start relative shrink-0 w-full" data-name="Background">
-              <div className="content-stretch flex flex-col items-start relative shrink-0 w-full mt-[10px]" data-name="Table">
+            <div className="bg-[#343434] content-stretch flex flex-col gap-[4.5px] items-stretch relative shrink-0 w-fit min-w-full" data-name="Background">
+              <div className="content-stretch flex flex-col items-stretch relative shrink-0 w-fit min-w-full mt-[10px]" data-name="Table">
                 <div
-                  style={{ display: 'grid', gridTemplateColumns: 'repeat(7, auto)', width: '100%' }}
-                  className="w-full overflow-x-auto"
+                  style={{ display: 'grid', gridTemplateColumns: 'repeat(7, auto)', minWidth: '100%' }}
+                  className="w-fit min-w-full"
                 >
                   <PortfolioHeaderRow />
                   {portfolio.length > 0 ? (
