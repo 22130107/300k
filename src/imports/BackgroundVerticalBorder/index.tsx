@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Portfolio item interface
 interface PortfolioItem {
@@ -217,28 +217,51 @@ function PortfolioRow({
 
   const [focusedField, setFocusedField] = useState<keyof PortfolioItem | null>(null);
 
+  // Track the last value WE sent to parent — so useEffect won't overwrite user-typed text
+  const lastSentQuantity = useRef(item.quantity);
+  const lastSentQuantityFS = useRef(item.quantityFS);
+  const lastSentAvgPrice = useRef(item.avgPrice);
+  const lastSentProfit = useRef(item.profit);
+  const lastSentProfitPercent = useRef(item.profitPercent);
+
   useEffect(() => {
     if (focusedField !== "symbol") setSymbolText(item.symbol);
   }, [item.symbol, focusedField]);
 
   useEffect(() => {
-    if (focusedField !== "quantity") setQuantityText(formatNumber(item.quantity));
+    // Only sync if change came from outside (not from our own onUpdateField)
+    if (focusedField !== "quantity" && item.quantity !== lastSentQuantity.current) {
+      setQuantityText(formatNumber(item.quantity));
+    }
+    lastSentQuantity.current = item.quantity;
   }, [item.quantity, focusedField]);
 
   useEffect(() => {
-    if (focusedField !== "quantityFS") setQuantityFSText(formatNumber(item.quantityFS));
+    if (focusedField !== "quantityFS" && item.quantityFS !== lastSentQuantityFS.current) {
+      setQuantityFSText(formatNumber(item.quantityFS));
+    }
+    lastSentQuantityFS.current = item.quantityFS;
   }, [item.quantityFS, focusedField]);
 
   useEffect(() => {
-    if (focusedField !== "avgPrice") setAvgPriceText(String(item.avgPrice));
+    if (focusedField !== "avgPrice" && item.avgPrice !== lastSentAvgPrice.current) {
+      setAvgPriceText(String(item.avgPrice));
+    }
+    lastSentAvgPrice.current = item.avgPrice;
   }, [item.avgPrice, focusedField]);
 
   useEffect(() => {
-    if (focusedField !== "profit") setProfitText(formatNumber(item.profit));
+    if (focusedField !== "profit" && item.profit !== lastSentProfit.current) {
+      setProfitText(formatNumber(item.profit));
+    }
+    lastSentProfit.current = item.profit;
   }, [item.profit, focusedField]);
 
   useEffect(() => {
-    if (focusedField !== "profitPercent") setProfitPercentText(formatNumber(item.profitPercent, 2));
+    if (focusedField !== "profitPercent" && item.profitPercent !== lastSentProfitPercent.current) {
+      setProfitPercentText(formatNumber(item.profitPercent, 2));
+    }
+    lastSentProfitPercent.current = item.profitPercent;
   }, [item.profitPercent, focusedField]);
 
   const handleSymbolChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -314,7 +337,7 @@ function PortfolioRow({
     }
   };
 
-  const handleBlurField = (field: keyof PortfolioItem, text: string, defaultValue: number) => {
+  const handleBlurField = (field: keyof PortfolioItem, text: string, defaultValue: number, setter: (v: string) => void) => {
     setFocusedField(null);
     let cleanText = text;
     if (field === "avgPrice" || field === "profitPercent") {
@@ -325,8 +348,11 @@ function PortfolioRow({
     const parsed = parseFloat(cleanText);
     if (isNaN(parsed)) {
       onUpdateField(item.id, field, defaultValue);
+      setter(String(defaultValue));
     } else {
       onUpdateField(item.id, field, parsed);
+      // Keep the user's typed text (with trailing zeros) intact
+      setter(cleanText);
     }
   };
 
@@ -356,7 +382,7 @@ function PortfolioRow({
           type="text" 
           value={quantityText} 
           onFocus={() => setFocusedField("quantity")}
-          onBlur={() => handleBlurField("quantity", quantityText, 0)}
+          onBlur={() => handleBlurField("quantity", quantityText, 0, setQuantityText)}
           onChange={handleQuantityChange}
           className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
@@ -369,7 +395,7 @@ function PortfolioRow({
           type="text" 
           value={quantityFSText} 
           onFocus={() => setFocusedField("quantityFS")}
-          onBlur={() => handleBlurField("quantityFS", quantityFSText, 0)}
+          onBlur={() => handleBlurField("quantityFS", quantityFSText, 0, setQuantityFSText)}
           onChange={handleQuantityFSChange}
           className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
@@ -382,7 +408,7 @@ function PortfolioRow({
           type="text" 
           value={avgPriceText} 
           onFocus={() => setFocusedField("avgPrice")}
-          onBlur={() => handleBlurField("avgPrice", avgPriceText, 0)}
+          onBlur={() => handleBlurField("avgPrice", avgPriceText, 0, setAvgPriceText)}
           onChange={handleAvgPriceChange}
           className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
@@ -395,7 +421,7 @@ function PortfolioRow({
           type="text" 
           value={profitText} 
           onFocus={() => setFocusedField("profit")}
-          onBlur={() => handleBlurField("profit", profitText, 0)}
+          onBlur={() => handleBlurField("profit", profitText, 0, setProfitText)}
           onChange={handleProfitChange}
           className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
         />
@@ -409,7 +435,7 @@ function PortfolioRow({
             type="text" 
             value={profitPercentText} 
             onFocus={() => setFocusedField("profitPercent")}
-            onBlur={() => handleBlurField("profitPercent", profitPercentText, 0)}
+            onBlur={() => handleBlurField("profitPercent", profitPercentText, 0, setProfitPercentText)}
             onChange={handleProfitPercentChange}
             className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px]`}
           />
