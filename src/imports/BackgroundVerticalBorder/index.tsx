@@ -174,11 +174,10 @@ function AccountHeader() {
 }
 
 // Portfolio Header cells
-function Cell({ label, width }: { label: string; width: string }) {
+function Cell({ label }: { label: string }) {
   return (
     <div 
-      className="bg-[#434343] content-stretch flex flex-col items-center pb-[5.25px] pt-[3.75px] px-px relative shrink-0" 
-      style={{ width }} 
+      className="bg-[#434343] content-stretch flex flex-col items-center pb-[5.25px] pt-[3.75px] px-px relative" 
       data-name="Cell"
     >
       <div className="[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[13.5px] text-center text-white whitespace-nowrap">
@@ -495,23 +494,23 @@ function PortfolioTotalRow({ items }: { items: PortfolioItem[] }) {
   return (
     <>
       {/* Tổng spans first 4 columns */}
-      <div className="content-stretch flex flex-col items-center pb-[1.5px] pt-px px-[2px] relative col-span-4" data-name="Data">
+      <div className="content-stretch flex flex-col items-center px-[2px] py-[2px] relative" style={{ gridColumn: 'span 4' }} data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-l border-b border-r inset-0 pointer-events-none" />
         <div className="[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[13.5px] text-center text-white whitespace-nowrap">
           <p className="leading-[19.5px]">Tổng</p>
         </div>
       </div>
 
-      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap`}>
+        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-1`}>
           <p className="leading-[19.5px]">{formatNumber(totalProfit)}</p>
         </div>
       </div>
 
-      <div className="content-stretch flex flex-col items-end pl-[5px] pr-[9.49px] py-[1.25px] relative" data-name="Data">
+      <div className="content-stretch flex flex-col items-end px-[2px] py-[2px] relative" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap`}>
+        <div className={`[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 ${textColorClass} text-[13.5px] text-right whitespace-nowrap pr-1`}>
           <p className="leading-[19.5px]">{formatNumber(totalProfitPercent, 2)}%</p>
         </div>
       </div>
@@ -834,8 +833,8 @@ export default function BackgroundVerticalBorder() {
             <div className="bg-[#343434] content-stretch flex flex-col gap-[4.5px] items-start relative shrink-0 w-full" data-name="Background">
               <div className="content-stretch flex flex-col items-start relative shrink-0 w-full mt-[10px]" data-name="Table">
                 <div
-                  className="w-full overflow-x-auto"
                   style={{ display: 'grid', gridTemplateColumns: 'repeat(7, auto)', width: '100%' }}
+                  className="w-full overflow-x-auto"
                 >
                   <PortfolioHeaderRow />
                   {portfolio.length > 0 ? (
