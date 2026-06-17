@@ -370,7 +370,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("symbol")}
           onBlur={handleSymbolBlur}
           onChange={handleSymbolChange}
-          className="bg-transparent text-center text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px]"
+          className="bg-transparent text-center text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] uppercase border-0 p-0 m-0 leading-[19.5px]"
           placeholder="Mã"
         />
       </div>
@@ -384,7 +384,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantity")}
           onBlur={() => handleBlurField("quantity", quantityText, 0, setQuantityText)}
           onChange={handleQuantityChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
       </div>
 
@@ -397,7 +397,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("quantityFS")}
           onBlur={() => handleBlurField("quantityFS", quantityFSText, 0, setQuantityFSText)}
           onChange={handleQuantityFSChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
       </div>
 
@@ -410,7 +410,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("avgPrice")}
           onBlur={() => handleBlurField("avgPrice", avgPriceText, 0, setAvgPriceText)}
           onChange={handleAvgPriceChange}
-          className="bg-transparent text-right text-white text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
+          className="bg-transparent text-right text-white text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1"
         />
       </div>
 
@@ -423,7 +423,7 @@ function PortfolioRow({
           onFocus={() => setFocusedField("profit")}
           onBlur={() => handleBlurField("profit", profitText, 0, setProfitText)}
           onChange={handleProfitChange}
-          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
+          className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px] pr-1`}
         />
       </div>
 
@@ -437,9 +437,9 @@ function PortfolioRow({
             onFocus={() => setFocusedField("profitPercent")}
             onBlur={() => handleBlurField("profitPercent", profitPercentText, 0, setProfitPercentText)}
             onChange={handleProfitPercentChange}
-            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-normal w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px]`}
+            className={`bg-transparent text-right ${textColorClass} text-[13.5px] font-[450] w-full focus:outline-none focus:bg-[#505050] border-0 p-0 m-0 leading-[19.5px]`}
           />
-          <span className={`${textColorClass} text-[13.5px] font-normal ml-0.5 pointer-events-none`}>%</span>
+          <span className={`${textColorClass} text-[13.5px] font-[450] ml-0.5 pointer-events-none`}>%</span>
         </div>
       </div>
 
