@@ -10,6 +10,7 @@ interface PortfolioItem {
   profit: number;
   profitPercent: number;
   currentPrice: number;
+  isSellHidden?: boolean;
 }
 
 // Placed order log interface
@@ -471,23 +472,40 @@ function PortfolioRow({
       </div>
 
       {/* Sell Button */}
-      <div 
-        className="content-stretch flex flex-col items-start pl-2 pr-[2px] py-[1.5px] relative" 
-        data-name="Data"
-        onClick={(e) => {
-          e.stopPropagation();
-          onDelete(item.id);
-        }}
-      >
-        <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
-        <div className="bg-[#af0505] relative rounded-[3px] shrink-0 cursor-pointer hover:bg-[#d32f2f] active:bg-[#b71c1c] transition-colors" data-name="Button">
-          <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[6px] py-[1px] relative size-full">
-            <div className="[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[13.5px] text-center text-white whitespace-nowrap">
-              <p className="leading-[19.5px]">BÁN</p>
+      {!item.isSellHidden ? (
+        <div 
+          className="content-stretch flex flex-col items-start pl-2 pr-[2px] py-[1.5px] relative" 
+          data-name="Data"
+          onClick={(e) => {
+            e.stopPropagation();
+            onUpdateField(item.id, 'isSellHidden', true);
+          }}
+        >
+          <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
+          <div className="bg-[#af0505] relative rounded-[3px] shrink-0 cursor-pointer hover:bg-[#d32f2f] active:bg-[#b71c1c] transition-colors" data-name="Button">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center px-[6px] py-[1px] relative size-full">
+              <div className="[word-break:break-word] flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[13.5px] text-center text-white whitespace-nowrap">
+                <p className="leading-[19.5px]">BÁN</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div 
+          className="content-stretch flex flex-col items-start pl-2 pr-[2px] py-[1.5px] relative cursor-pointer group" 
+          data-name="Data"
+          onClick={(e) => {
+            e.stopPropagation();
+            onUpdateField(item.id, 'isSellHidden', false);
+          }}
+          title="Bấm để hiện lại nút BÁN"
+        >
+          <div aria-hidden className="absolute border-[#434343] border-solid border-b border-r inset-0 pointer-events-none" />
+          <div className="size-full min-h-[21.5px] flex items-center justify-center">
+            <span className="text-[10px] text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity">Hiện lại</span>
+          </div>
+        </div>
+      )}
     </>
   );
 }
