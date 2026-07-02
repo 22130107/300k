@@ -384,8 +384,20 @@ function PortfolioRow({
   return (
     <>
       {/* Mã CK Input */}
-      <div className="content-stretch flex flex-col items-center p-[2px] relative hover:bg-[#3d3d3d] transition-colors" data-name="Data">
+      <div className="content-stretch flex flex-col items-center p-[2px] relative hover:bg-[#3d3d3d] transition-colors group/row" data-name="Data">
         <div aria-hidden className="absolute border-[#434343] border-solid border-l border-b border-r inset-0 pointer-events-none" />
+        
+        {/* Delete button, visible on hover */}
+        <div 
+          className="absolute left-1 top-1/2 -translate-y-1/2 opacity-0 group-hover/row:opacity-100 cursor-pointer text-red-500 hover:text-red-400 z-10"
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete(item.id);
+          }}
+          title="Xóa dòng"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </div>
         <input 
           type="text" 
           value={symbolText} 
