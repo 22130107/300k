@@ -126,15 +126,37 @@ function BackgroundHorizontalBorder({ activeTab, setActiveTab }: { activeTab: st
 }
 
 // Account Header
+const ACCOUNT_OPTIONS = ["7423321", "7423323", "7423326", "7423328"];
+
 function AccountHeader() {
   const [selectedAccount, setSelectedAccount] = useState(() => {
     return localStorage.getItem("vps_selected_account") || "7423326";
   });
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  // Close the suggestion list when clicking outside
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleOutside = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    return () => document.removeEventListener("mousedown", handleOutside);
+  }, [isOpen]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     setSelectedAccount(val);
     localStorage.setItem("vps_selected_account", val);
+  };
+
+  const handlePick = (val: string) => {
+    setSelectedAccount(val);
+    localStorage.setItem("vps_selected_account", val);
+    setIsOpen(false);
   };
 
   return (
@@ -149,24 +171,43 @@ function AccountHeader() {
             </div>
             <div className="content-stretch flex flex-col items-start justify-center pr-[1.41px] relative self-stretch shrink-0" data-name="Margin">
               <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px pl-[3.59px] relative" data-name="Container">
-                <div className="bg-[#343434] content-stretch flex h-[30px] items-center justify-center pl-[5px] pr-[8px] py-px relative rounded-[5px] shrink-0 w-[180px]" data-name="Options">
+                <div ref={containerRef} className="bg-[#343434] content-stretch flex h-[30px] items-center justify-center pl-[5px] pr-[8px] py-px relative rounded-[5px] shrink-0 w-[180px]" data-name="Options">
                   <div aria-hidden className="absolute border border-[#777] border-solid inset-0 pointer-events-none rounded-[5px]" />
-                  <select 
+                  <input
+                    type="text"
+                    inputMode="numeric"
                     value={selectedAccount}
                     onChange={handleChange}
-                    className="bg-transparent text-white text-[14px] font-['Inter:Regular',sans-serif] font-normal w-full h-[22px] focus:outline-none border-0 pl-[5px] pr-[18px] cursor-pointer appearance-none relative z-10"
-                    style={{
-                      backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 2 L6 6.5 L10.5 2'/%3E%3C/svg%3E")`,
-                      backgroundPosition: 'right 0px center',
-                      backgroundSize: '11px',
-                      backgroundRepeat: 'no-repeat',
-                    }}
+                    onFocus={() => setIsOpen(true)}
+                    spellCheck={false}
+                    className="bg-transparent text-white text-[14px] font-['Inter:Regular',sans-serif] font-normal w-full h-[22px] focus:outline-none border-0 pl-[5px] pr-[18px] relative z-10"
+                  />
+                  <button
+                    type="button"
+                    aria-label="Danh sách tài khoản"
+                    onClick={() => setIsOpen((open) => !open)}
+                    className="absolute right-[3px] top-1/2 -translate-y-1/2 z-20 flex h-[22px] w-[16px] items-center justify-center text-white cursor-pointer"
                   >
-                    <option value="7423321" className="bg-[#343434] text-white">7423321</option>
-                    <option value="7423323" className="bg-[#343434] text-white">7423323</option>
-                    <option value="7423326" className="bg-[#343434] text-white">7423326</option>
-                    <option value="7423328" className="bg-[#343434] text-white">7423328</option>
-                  </select>
+                    <svg width="11" height="8" viewBox="0 0 12 8" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform ${isOpen ? "rotate-180" : ""}`}>
+                      <path d="M1.5 2 L6 6.5 L10.5 2" />
+                    </svg>
+                  </button>
+                  {isOpen && (
+                    <div className="absolute left-0 right-0 top-[30px] z-30 overflow-hidden rounded-[5px] border border-[#777] bg-[#343434] py-1 shadow-lg">
+                      {ACCOUNT_OPTIONS.map((val) => (
+                        <button
+                          key={val}
+                          type="button"
+                          onClick={() => handlePick(val)}
+                          className={`block w-full px-[10px] py-[3px] text-left text-[14px] text-white hover:bg-[#8229e3] ${
+                            val === selectedAccount ? "bg-[#4a4a4a]" : ""
+                          }`}
+                        >
+                          {val}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
